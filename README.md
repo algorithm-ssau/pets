@@ -2,4 +2,4 @@
 
 to run this on your system you will need 
 
-```npm i express mongodb cors body-parser```
+```npm i```
