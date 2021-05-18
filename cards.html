@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="windows-1251">
-	<title>Домашние животные</title>
+	<title>Поиск</title>
 	<link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -36,20 +36,39 @@
 			</div>
 		</header>
 
-		<div class="layout__row layout__row_catalog">
+		<div class="layout__row layout__row_navigation-chain">
 			<div class="container box">
+				<a class="navigation-chain-a" href="index.html">Главная</a>
+				<svg class="navigation-chain-em-dash" width="10" height="1" viewBox="0 0 10 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<line y1="0.6" x2="10" y2="0.6" stroke="#828282" stroke-width="0.8" />
+				</svg>
 				<!--TODO обработчик-->
-				<a class="catalog-a" href="cards.html">Кошки</a>
-				<!--TODO обработчик-->
-				<a class="catalog-a" href="">Собаки</a>
+				<a class="navigation-chain-a" href="">Кошки</a>
 			</div>
 		</div>
 
 		<div class="layout__row layout__row_body">
-			<video class="main-video" autoplay loop muted playsinline> 
-				<source src="video/main-cat.mp4" type="video/mp4"> 
-				<source src="video/main-cat.webm" type="video/webm"> 
-			</video>
+			<div class="container">
+				<div class="grid">
+					<!--TODO обработчик-->
+					<div>
+						<a class="cards-a-with-img" href="card.html">
+							<img src="img/img1.jpg" />
+						</a>
+						<div class="box cards-div-name">
+							<a class="cards-name" href="card.html">Барсик</a>
+						</div>
+					</div>
+					<div>
+						<a class="cards-a-with-img" href="card.html">
+							<img src="img/img2.jpg" />
+						</a>
+						<div class="box cards-div-name">
+							<a class="cards-name" href="card.html">Снежок</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<footer class="layout__row layout__row_footer">
