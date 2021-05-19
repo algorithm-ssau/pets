@@ -3,8 +3,8 @@
 to run this on your system you will need 
 
 ```npm i -g @vue/cli```
-```npm i```
+```npm ci```
 ```npm start```
 ```cd client```
-```npm i```
+```npm ci```
 ```npm run serve```
