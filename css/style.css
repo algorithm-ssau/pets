@@ -1,0 +1,305 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #333; /* Gray 1 */
+}
+
+a {
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.layout {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.layout__row {
+	width: 100%;
+}
+
+.layout__row_header {
+	height: 50px;
+	background-color: #090; /* Green */
+	position: sticky;
+	top: 0;
+}
+
+.layout__row_footer {
+	height: 50px;
+	background-color: #F2F2F2; /* Gray 6 */
+}
+
+.layout__row_navigation-chain {
+	height: 80px;
+}
+
+.layout__row_body {
+	flex-grow: 1;
+}
+
+.layout__row_catalog {
+	height: 80px;
+}
+
+.container {
+	width: 1170px;
+	height: 100%;
+	margin: 0 auto;
+	min-width: 1170px;
+}
+
+.box {
+	display: flex;
+	align-items: center;
+}
+
+.box-vert {
+	flex-direction: column;
+}
+
+.a-with-svg {
+	display: inline-flex;
+}
+
+.header-catalog{
+	margin-left: 45px;
+}
+
+.header-search {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.footer-span {
+	font-weight: 300;
+	color: #828282; /* Gray 3 */
+}
+
+.navigation-chain-a {
+	font-weight: 300;
+	color: #828282; /* Gray 3 */
+}
+
+.navigation-chain-a:hover {
+	color: #333; /* Gray 1 */
+}
+
+.navigation-chain-em-dash {
+	margin: 0 16px;
+}
+
+.catalog-a {
+	font-weight: 600;
+	text-decoration: none;
+	white-space: nowrap;
+	margin-right: 68px;
+}
+
+.catalog-a:hover {
+		color: #090; /* Green */
+	}
+
+.main-video {
+	width: 100%;
+	float: left;
+	min-width: 1170px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 30px;
+}
+
+.grid > div {
+	width: 370px;
+	height: 500px;
+}
+
+.cards-a-with-img {
+	display: block;
+	width: 100%;
+	height: 413px;
+}
+
+.cards-a-with-img > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.cards-div-name {
+	width: 100%;
+	height: 87px;
+}
+
+.cards-name {
+	font-size: 22px;
+	font-weight: 500;
+	color: black;
+}
+
+.card {
+	height: 636px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.card-a-with-img {
+	display: block;
+	width: 570px;
+	height: 100%;
+}
+
+.card-a-with-img > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card-info {
+	width: 600px;
+}
+
+.card-info-name {
+	width: 527px;
+	font-size: 26px;
+	font-weight: 500;
+	color: black;
+	margin: 0 auto 35px auto;
+}
+
+.card-info > div {
+	width: 527px;
+	margin: 0 auto;
+}
+
+.span-block {
+	display: block;
+}
+
+.card-info-left-span {
+	width: 157px;
+	max-width: 157px;
+	margin: 8px 0;
+	color: #828282; /* Gray 3 */
+}
+/*----------------------------------------------------------------------*/
+
+/*
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+*/
+/*
+.header a {
+	color: #f2f2f2;
+	font-size: 17px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	padding: 14px 16px;
+}
+
+.header a:hover {
+	background-color: #DDDDDD;
+	color: black;
+}*/
+/*
+.main {
+	display: flex;
+	flex-direction: column;
+  	margin: 13px auto;
+	width: 1000px;
+	min-width: 1000px;
+	background-color: #fff;
+	border: 13px solid #fff;
+	border-radius: 5px;
+}
+
+.main-first {
+	margin-top: 61px;
+}
+
+.main-img {
+	width: 32%;
+	border: 1px solid #333;
+	border-radius: 2px;	
+	margin: 0 8px;
+}
+
+.main-img-left {
+	margin: 0 13px 0 0;
+	float: left;
+}
+
+.main-img-right {
+	margin: 0 0 0 13px;
+	float: right;
+}
+
+.main-imgs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-text-first {
+	margin-top: 0;
+}
+
+.main-text-last {
+	margin-bottom: 0;
+}
+
+.main-text-center {
+	text-align: center;
+}
+
+.main-table {
+	display: inline-block;
+	border-collapse: collapse;	
+	text-align: center;
+	width: 48%;
+}
+
+.main-table caption {
+	padding: 0 14px 12px 14px;
+	font-size: 1.3em;
+}
+
+.main-table th, td {
+	border: 2px solid #333;
+	padding: 7px 14px;
+}
+
+.main-table-assessment {
+	width: 10%;
+}
+
+.main-tables {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+hr {
+	margin: 13px 0;
+	border: 1px solid #eee;
+}
+
+.anchor {
+	position: absolute;
+	margin-top: -61px;
+}
+	*/
