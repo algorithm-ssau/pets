@@ -3,3 +3,6 @@
 to run this on your system you will need 
 
 ```npm i```
+```npm start```
+```cd client```
+```npm run serve```
