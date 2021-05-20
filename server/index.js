@@ -3,13 +3,11 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const pets = require('./routes/API/pets')
 
-const application = express()
+const PORT = process.env.PORT ?? 5000
+const app = express()
 
-application.use(bodyParser.json())
-application.use(cors())
+app.use(bodyParser.json())
+app.use(cors())
+app.use('/API/pets', pets)
 
-application.use('/API/pets', pets)
-
-const port = process.env.port || 5000
-
-application.listen(port, () => console.log('Server started on port: ' + port))
+app.listen(PORT, () => console.log(`Server has been started on port ${PORT}...`))
