@@ -39,7 +39,7 @@
   v-bind:is="currentTab"></component>
 </div>
 </template>
-//423
+
 <script>
 import homeTab from './components/homeTab.vue'
 import catalogTab from './components/catalogTab.vue'
