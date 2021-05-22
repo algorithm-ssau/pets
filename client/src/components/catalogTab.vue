@@ -1,12 +1,12 @@
 <template>
 	<div class="layout__row layout__row_body">
 		<div class="container">
-			<div class="grid">
+			<div class="grid" v-cloak>
 				<div class="pet"
 				v-for="(pet, index) in filteredPets"
 				:item="pet"
 				:index="index"
-				:key="pet._id"
+				:key="pet._id"				
 				>
 					<a class="cards-a-with-img" @click="cardPressed(pet)" href="#">
 						<img :src="getImgPath(pet._id)">
@@ -64,7 +64,7 @@ export default {
 	computed: {
 		filteredPets() {
 			return this.pets.filter(pet => {
-				if (pet.kind === this.kindOfPets) return true;
+				if (this.breedOfPets === '' && pet.kind === this.kindOfPets) return true;
 				if (pet.breed === this.breedOfPets) return true;
 				return false;
 			})
