@@ -13,6 +13,10 @@ a {
 	white-space: nowrap;
 }
 
+a:visited {
+	color: #333; /* Gray 1 */
+}
+
 .layout {
 	background-color: white;
 	display: flex;
