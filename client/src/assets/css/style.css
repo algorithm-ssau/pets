@@ -73,8 +73,45 @@ a {
 }
 
 .header-search {
+	position: relative;
+	height: 29px;
+	width: 329px;
 	margin-right: 0;
-	margin-left: auto;
+	margin-left: auto;	
+}
+
+.header-search > input {
+	height: 29px;
+	width: 0;
+	padding: 0 29px 0 0;
+	border: none;
+	outline: none;
+	background: transparent;
+	transition: .4s ease;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	cursor: pointer;
+	color: white;	
+}
+
+.header-search > input:focus {
+	width: 291px;
+	padding: 0;
+	margin-right: 38px;
+	border-bottom: 2px solid white;
+	cursor: text;
+}
+
+.header-search > input::placeholder {
+	color: #E0E0E0; /* Gray 5 */
+}
+
+.header-search > a {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .footer-span {
@@ -103,8 +140,8 @@ a {
 }
 
 .catalog-a:hover {
-		color: #090; /* Green */
-	}
+	color: #090; /* Green */
+}
 
 .main-video {
 	width: 100%;
@@ -191,6 +228,8 @@ a {
 	margin: 8px 0;
 	color: #828282; /* Gray 3 */
 }
+
+
 /*----------------------------------------------------------------------*/
 
 /*
