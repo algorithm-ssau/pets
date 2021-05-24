@@ -39,6 +39,9 @@ export default {
 				case 'Собаки': 
 					kind = 'dogs';
 					break;
+				case 'Попугаи': 
+					kind = 'parrots';
+					break;
 				default: 
 					kind = '';
 			}

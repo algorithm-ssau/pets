@@ -4,6 +4,7 @@
 			<div class="container box">
 				<a class="catalog-a" @click="catalogPressed('Кошки', '')" href="#">Кошки</a>
 				<a class="catalog-a" @click="catalogPressed('Собаки', '')" href="#">Собаки</a>
+				<a class="catalog-a" @click="catalogPressed('Попугаи', '')" href="#">Попугаи</a>
 			</div>
 		</div>
 		<video class="main-video" autoplay loop muted playsinline> 
