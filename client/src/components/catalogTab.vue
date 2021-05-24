@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import PetsImport from '../api/PetsImport.js'
 
 export default {
 	name: 'catalogTab',
@@ -34,13 +33,8 @@ export default {
 		breedOfPets: {
 			type: String,
 			default: ''
-		}
-	},
-	data() {
-		return {
-			pets: [],
-			error: ''
-		}
+		},
+		pets: []
 	},
 	methods: {
 		cardPressed(pet) {
@@ -55,6 +49,9 @@ export default {
 				case 'Собаки': 
 					kind = 'dogs';
 					break;
+				case 'Попугаи': 
+					kind = 'parrots';
+					break;
 				default: 
 					kind = '';
 			}
@@ -68,13 +65,6 @@ export default {
 				if (pet.breed === this.breedOfPets) return true;
 				return false;
 			})
-		}
-	},
-	async created() {
-		try {
-			this.pets = await PetsImport.getPets()
-		} catch (error) {
-			this.error = error.message
 		}
 	}
 }
