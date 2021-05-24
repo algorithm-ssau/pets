@@ -1,15 +1,20 @@
 <template>
 	<div class="layout__row layout__row_body">
+        <div class="container box">
+			<span
+				v-if="findedPets.length === 0"
+			>Ничего не найдено</span>
+		</div>
 		<div class="container">
 			<div class="grid" v-cloak>
 				<div class="pet"
-				v-for="(pet, index) in filteredPets"
+				v-for="(pet, index) in findedPets"
 				:item="pet"
 				:index="index"
 				:key="pet._id"				
 				>
 					<a class="cards-a-with-img" @click="cardPressed(pet)" href="#">
-						<img :src="getImgPath(pet._id)">
+						<img :src="getImgPath(pet)">
 					</a>
 					<div class="box cards-div-name">
 						<a class="cards-name" @click="cardPressed(pet)" href="#">{{ pet.name }}</a>
@@ -26,23 +31,16 @@
 export default {
 	name: 'catalogTab',
 	props: {
-		kindOfPets: {
-			type: String,
-			default: ''
-		}, 
-		breedOfPets: {
-			type: String,
-			default: ''
-		},
-		pets: []
+		pets: [],
+		findedPets: []
 	},
 	methods: {
 		cardPressed(pet) {
 			this.$emit('cardPressed', pet)
 		},
-		getImgPath(id) {
+		getImgPath(pet) {
 			var kind
-			switch (this.kindOfPets) {
+			switch (pet.kind) {
 				case 'Кошки': 
 					kind = 'cats';
 					break;
@@ -55,16 +53,7 @@ export default {
 				default: 
 					kind = '';
 			}
-			return require(`../assets/images/${kind}/${id}.jpg`)
-		}
-	},
-	computed: {
-		filteredPets() {
-			return this.pets.filter(pet => {
-				if (this.breedOfPets === '' && pet.kind === this.kindOfPets) return true;
-				if (pet.breed === this.breedOfPets) return true;
-				return false;
-			})
+			return require(`../assets/images/${kind}/${pet._id}.jpg`)
 		}
 	}
 }

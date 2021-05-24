@@ -18,7 +18,7 @@
         </a>-->
         <div class="header-search box">
           <input type="text" placeholder="Поиск"
-            @input="inputSearch"            
+            @input="inputSearch"           
           >
           <a class="a-with-svg" href="#"
             @click="findSearch" 
@@ -51,6 +51,7 @@
       :breedOfPets='breedOfPets'
       :petInfo='pet'
       :pets='pets'
+      :findedPets="findedPets"
       :is="currentTab"> 
     </component>
     <footer class="layout__row layout__row_footer">
@@ -83,6 +84,7 @@ export default {
       breedOfPets: '',
       pet: {},
       pets: [],
+      findedPets: [],
 			error: '',
       search: ''
     }
@@ -96,6 +98,7 @@ export default {
     catalogPressed(catalog) {  
       this.kindOfPets = catalog.kind, 
       this.breedOfPets = catalog.breed, 
+      this.findPets()
       this.currentTab = 'catalogTab'
     },
     cardPressed(card) {
@@ -107,32 +110,51 @@ export default {
     inputSearch(event) {
       this.search = event.target.value
     },
-    findSearch(){
+    findPets() {
+        this.findedPets = this.pets.filter(pet => {
+          if (this.breedOfPets === '' && pet.kind === this.kindOfPets) return true;
+          if (pet.breed === this.breedOfPets) return true;
+          return false;
+        })
+    },
+    findSearch(){      
       this.search = this.search.toLowerCase()
-      var searchPets = this.pets.filter(pet => {
+      this.findedPets = this.pets.filter(pet => {
 				if (pet.breed.toLowerCase() === this.search) return true;
 				return false;
 			})
-      if (searchPets.length > 0 ) {
-        this.kindOfPets = searchPets[0].kind
-        this.breedOfPets = searchPets[0].breed
+      if (this.findedPets.length > 0 ) {
+        this.kindOfPets = this.findedPets[0].kind
+        this.breedOfPets = this.findedPets[0].breed
         this.currentTab = 'catalogTab'
         return
       }
 
-      searchPets = this.pets.filter(pet => {
+      this.findedPets = this.pets.filter(pet => {
 				if (pet.kind.toLowerCase() === this.search) return true;
 				return false;
 			})
-      if (searchPets.length > 0 ) {
-        this.kindOfPets = searchPets[0].kind     
+      if (this.findedPets.length > 0 ) {
+        this.kindOfPets = this.findedPets[0].kind     
         this.breedOfPets = ''
+        this.currentTab = 'catalogTab'
+        return
+      }
+
+      this.findedPets = this.pets.filter(pet => {
+        if (pet.name.toLowerCase() === this.search) return true;
+        return false;
+			})
+      if (this.findedPets.length > 0 ) {    
+        this.kindOfPets = ''
+        this.breedOfPets = ''    
         this.currentTab = 'catalogTab'
         return
       }
 
       this.kindOfPets = ''
       this.breedOfPets = ''
+      this.findedPets = []
       this.currentTab = 'catalogTab'
     },
     print(event) {
