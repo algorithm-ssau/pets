@@ -2,9 +2,9 @@
 	<div class="layout__row layout__row_body">
 		<div class="layout__row_catalog">
 			<div class="container box">
-				<a class="catalog-a" @click="catalogPressed('Кошки', '')" href="#">Кошки</a>
-				<a class="catalog-a" @click="catalogPressed('Собаки', '')" href="#">Собаки</a>
-				<a class="catalog-a" @click="catalogPressed('Попугаи', '')" href="#">Попугаи</a>
+				<a class="catalog-a" @click="kindPressed('Кошки')" href="#">Кошки</a>
+				<a class="catalog-a" @click="kindPressed('Собаки')" href="#">Собаки</a>
+				<a class="catalog-a" @click="kindPressed('Попугаи')" href="#">Попугаи</a>
 			</div>
 		</div>
 		<video class="main-video" autoplay loop muted playsinline> 
@@ -18,9 +18,9 @@
 export default {
 	name: 'homeTab',
 	methods: {
-		catalogPressed(kind, breed) {
-			this.$emit('catalogPressed', {kind, breed})
-		}
+        kindPressed(kind) {
+            this.$emit('catalogPressed', {kind, breed: ''})
+        }
 	}
 }
 </script>

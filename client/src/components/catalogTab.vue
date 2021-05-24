@@ -1,11 +1,13 @@
 <template>
 	<div class="layout__row layout__row_body">
-        <div class="container box">
-			<span
-				v-if="findedPets.length === 0"
-			>Ничего не найдено</span>
+        <div class="container box"
+			v-if="findedPets.length === 0"
+		>
+			<span>Ничего не найдено</span>
 		</div>
-		<div class="container">
+		<div class="container"
+			v-else
+		>
 			<div class="grid" v-cloak>
 				<div class="pet"
 				v-for="(pet, index) in findedPets"
@@ -31,7 +33,6 @@
 export default {
 	name: 'catalogTab',
 	props: {
-		pets: [],
 		findedPets: []
 	},
 	methods: {

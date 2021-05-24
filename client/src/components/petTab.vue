@@ -2,18 +2,18 @@
 	<div class="layout__row layout__row_body">
 		<div class="container card">
 			<a class="card-a-with-img" href="">
-				<img :src="getImgPath(petInfo._id)">
+				<img :src="getImgPath()">
 			</a>
 			<div class="card-info">			
-				<span class="span-block card-info-name">{{ petInfo.name }}</span>		
+				<span class="span-block card-info-name">{{ pet.name }}</span>		
 				<div class="box-vert">
 					<div class="box">
 						<span class="span-block card-info-left-span">Порода:</span>
-						<span class="span-block">{{ petInfo.breed }}</span>
+						<span class="span-block">{{ pet.breed }}</span>
 					</div>
 					<div class="box">
 						<span class="span-block card-info-left-span">Владелец:</span>
-						<span class="span-block">{{ petInfo.owner }}</span>
+						<span class="span-block">{{ pet.owner }}</span>
 					</div>
 				</div>
 			</div>
@@ -25,14 +25,12 @@
 export default {
 	name: 'petTab',
 	props: {
-		petInfo: {},
-		kindOfPets: String,
-		breedOfPets: String
+		pet: {}
 	},
 	methods: {
-		getImgPath(id) {
+		getImgPath() {
 			var kind
-			switch (this.kindOfPets) {
+			switch (this.pet.kind) {
 				case 'Кошки': 
 					kind = 'cats';
 					break;
@@ -45,7 +43,7 @@ export default {
 				default: 
 					kind = '';
 			}
-			return require(`../assets/images/${kind}/${id}.jpg`)
+			return require(`../assets/images/${kind}/${this.pet._id}.jpg`)
 		}
 	}
 }
