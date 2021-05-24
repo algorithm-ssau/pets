@@ -17,8 +17,12 @@
           </svg>
         </a>-->
         <div class="header-search box">
-          <input type="text" placeholder="Поиск">
-          <a class="a-with-svg" href="#">
+          <input type="text" placeholder="Поиск"
+            @input="inputSearch"            
+          >
+          <a class="a-with-svg" href="#"
+            @click="findSearch" 
+          >
             <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M28.6457 26.9381L20.3989 18.6913C21.9963 16.7181 22.9581 14.2108 22.9581 11.48C22.9581 5.15083 17.8082 0.000946045 11.479 0.000946045C5.14983 0.000946045 0 5.15077 0 11.48C0 17.8092 5.14989 22.959 11.4791 22.959C14.2099 22.959 16.7171 21.9972 18.6903 20.3998L26.9371 28.6466C27.1727 28.8822 27.482 29.0007 27.7914 29.0007C28.1008 29.0007 28.4101 28.8822 28.6457 28.6466C29.1182 28.1742 29.1182 27.4105 28.6457 26.9381ZM11.4791 20.5424C6.48144 20.5424 2.41666 16.4776 2.41666 11.48C2.41666 6.48233 6.48144 2.41755 11.4791 2.41755C16.4767 2.41755 20.5415 6.48233 20.5415 11.48C20.5415 16.4776 16.4767 20.5424 11.4791 20.5424Z" fill="white" />
             </svg>
@@ -79,7 +83,8 @@ export default {
       breedOfPets: '',
       pet: {},
       pets: [],
-			error: ''
+			error: '',
+      search: ''
     }
   },
   methods: {
@@ -98,6 +103,37 @@ export default {
       this.kindOfPets = card.kind, 
       this.breedOfPets = card.breed, 
       this.currentTab = "petTab"
+    },
+    inputSearch(event) {
+      this.search = event.target.value
+    },
+    findSearch(){
+      this.search = this.search.toLowerCase()
+      var searchPets = this.pets.filter(pet => {
+				if (pet.breed.toLowerCase() === this.search) return true;
+				return false;
+			})
+      if (searchPets.length > 0 ) {
+        this.kindOfPets = searchPets[0].kind
+        this.breedOfPets = searchPets[0].breed
+        this.currentTab = 'catalogTab'
+        return
+      }
+
+      searchPets = this.pets.filter(pet => {
+				if (pet.kind.toLowerCase() === this.search) return true;
+				return false;
+			})
+      if (searchPets.length > 0 ) {
+        this.kindOfPets = searchPets[0].kind     
+        this.breedOfPets = ''
+        this.currentTab = 'catalogTab'
+        return
+      }
+
+      this.kindOfPets = ''
+      this.breedOfPets = ''
+      this.currentTab = 'catalogTab'
     },
     print(event) {
       console.log(event)
