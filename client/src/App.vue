@@ -105,10 +105,7 @@ export default {
   },
 	async created() {
 		try {
-			console.log(this.pets.length)
-			if (this.pets.length > 0) return;
 			this.pets = await PetsImport.getPets()
-      console.log(this.pets.length)
 		} catch (error) {
 			this.error = error.message
 		}
@@ -116,7 +113,7 @@ export default {
 }
 </script>
 
-<style>
+<style scorped>
   @import './assets/css/style.css';
   @import './assets/css/reset.css';
 </style>

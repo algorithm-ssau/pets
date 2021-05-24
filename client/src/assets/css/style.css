@@ -128,8 +128,12 @@ a:visited {
 	color: #828282; /* Gray 3 */
 }
 
-.navigation-chain-a:hover {
-	color: #333; /* Gray 1 */
+/*.navigation-chain-a:hover {
+	color: #333; Gray 1 
+}*/
+
+.navigation-chain-a:visited {
+	color: #828282; /* Gray 3 */
 }
 
 .navigation-chain-em-dash {
