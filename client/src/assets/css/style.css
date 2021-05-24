@@ -85,25 +85,8 @@ a:visited {
 }
 */
 .header-search {
-	height: 29px;
-	width: 329px;
 	margin-right: 0;
 	margin-left: auto;	
-}
-
-.header-search > input {
-	height: 29px;
-	width: 291px;
-	padding: 0;
-	border: none;
-	outline: none;
-	background: transparent;
-	transition: .4s ease;
-	cursor: pointer;
-	color: white;
-	
-	margin-right: 9px;
-	border-bottom: 2px solid white;
 }
 
 /*
@@ -122,7 +105,21 @@ a:visited {
 	cursor: pointer;
 	color: white;	
 }
+*/
+.header-search > input {
+	height: 29px;
+	width: 300px;
+	padding: 0;
+	margin-right: 9px;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: white;
 
+	border-bottom: 2px solid white;
+}
+
+/*
 .header-search > input:focus {
 	width: 291px;
 	padding: 0;
@@ -131,6 +128,7 @@ a:visited {
 	cursor: text;
 }
 */
+
 .header-search > input::placeholder {
 	color: #E0E0E0; /* Gray 5 */
 }
