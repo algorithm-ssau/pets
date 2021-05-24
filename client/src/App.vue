@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">       
+  <div class="layout" v-if="pets.length > 0">       
     <header class="layout__row layout__row_header">
       <div id="headerButtons" class="container box">
         <a class="a-with-svg" href="#"
@@ -116,6 +116,7 @@ export default {
 				if (pet.breed.toLowerCase() === this.search) return true;
 				return false;
 			})
+      
       if (this.findedPets.length > 0 ) {
         this.kindOfPets = this.findedPets[0].kind
         this.breedOfPets = this.findedPets[0].breed
@@ -127,6 +128,7 @@ export default {
 				if (pet.kind.toLowerCase() === this.search) return true;
 				return false;
 			})
+
       if (this.findedPets.length > 0 ) {
         this.kindOfPets = this.findedPets[0].kind     
         this.breedOfPets = ''
@@ -154,7 +156,7 @@ export default {
       console.log(event)
     }
   },
-	async created() {
+	async beforeCreate () {
 		try {
 			this.pets = await PetsImport.getPets()
 		} catch (error) {
