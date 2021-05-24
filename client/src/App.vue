@@ -2,7 +2,9 @@
   <div class="layout">       
     <header class="layout__row layout__row_header">
       <div id="headerButtons" class="container box">
-        <a class="a-with-svg" @click="homePressed" href="#">
+        <a class="a-with-svg" href="#"
+          @click="homePressed()"
+        >
           <svg width="55" height="18" viewBox="0 0 55 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.264 0.199999C9.752 0.199999 11.04 0.447999 12.128 0.943999C13.232 1.44 14.08 2.144 14.672 3.056C15.264 3.968 15.56 5.048 15.56 6.296C15.56 7.528 15.264 8.608 14.672 9.536C14.08 10.448 13.232 11.152 12.128 11.648C11.04 12.128 9.752 12.368 8.264 12.368H4.88V17H0.992V0.199999H8.264ZM8.048 9.2C9.216 9.2 10.104 8.952 10.712 8.456C11.32 7.944 11.624 7.224 11.624 6.296C11.624 5.352 11.32 4.632 10.712 4.136C10.104 3.624 9.216 3.368 8.048 3.368H4.88V9.2H8.048ZM30.6963 10.592C30.6963 10.64 30.6723 10.976 30.6243 11.6H20.8563C21.0323 12.4 21.4483 13.032 22.1043 13.496C22.7603 13.96 23.5763 14.192 24.5523 14.192C25.2243 14.192 25.8163 14.096 26.3283 13.904C26.8563 13.696 27.3443 13.376 27.7923 12.944L29.7843 15.104C28.5683 16.496 26.7923 17.192 24.4563 17.192C23.0003 17.192 21.7123 16.912 20.5923 16.352C19.4723 15.776 18.6083 14.984 18.0003 13.976C17.3923 12.968 17.0883 11.824 17.0883 10.544C17.0883 9.28 17.3843 8.144 17.9763 7.136C18.5843 6.112 19.4083 5.32 20.4483 4.76C21.5043 4.184 22.6803 3.896 23.9763 3.896C25.2403 3.896 26.3843 4.168 27.4083 4.712C28.4323 5.256 29.2323 6.04 29.8083 7.064C30.4003 8.072 30.6963 9.248 30.6963 10.592ZM24.0003 6.728C23.1523 6.728 22.4403 6.968 21.8643 7.448C21.2883 7.928 20.9363 8.584 20.8083 9.416H27.1683C27.0403 8.6 26.6883 7.952 26.1123 7.472C25.5363 6.976 24.8323 6.728 24.0003 6.728ZM41.5169 16.376C41.1489 16.648 40.6929 16.856 40.1489 17C39.6209 17.128 39.0609 17.192 38.4689 17.192C36.9329 17.192 35.7409 16.8 34.8929 16.016C34.0609 15.232 33.6449 14.08 33.6449 12.56V7.256H31.6529V4.376H33.6449V1.232H37.3889V4.376H40.6049V7.256H37.3889V12.512C37.3889 13.056 37.5249 13.48 37.7969 13.784C38.0849 14.072 38.4849 14.216 38.9969 14.216C39.5889 14.216 40.0929 14.056 40.5089 13.736L41.5169 16.376ZM47.9626 17.192C46.8906 17.192 45.8426 17.064 44.8186 16.808C43.7946 16.536 42.9786 16.2 42.3706 15.8L43.6186 13.112C44.1946 13.48 44.8906 13.784 45.7066 14.024C46.5226 14.248 47.3226 14.36 48.1066 14.36C49.6906 14.36 50.4826 13.968 50.4826 13.184C50.4826 12.816 50.2666 12.552 49.8346 12.392C49.4026 12.232 48.7386 12.096 47.8426 11.984C46.7866 11.824 45.9146 11.64 45.2266 11.432C44.5386 11.224 43.9386 10.856 43.4266 10.328C42.9306 9.8 42.6826 9.048 42.6826 8.072C42.6826 7.256 42.9146 6.536 43.3786 5.912C43.8586 5.272 44.5466 4.776 45.4426 4.424C46.3546 4.072 47.4266 3.896 48.6586 3.896C49.5706 3.896 50.4746 4 51.3706 4.208C52.2826 4.4 53.0346 4.672 53.6266 5.024L52.3786 7.688C51.2426 7.048 50.0026 6.728 48.6586 6.728C47.8586 6.728 47.2586 6.84 46.8586 7.064C46.4586 7.288 46.2586 7.576 46.2586 7.928C46.2586 8.328 46.4746 8.608 46.9066 8.768C47.3386 8.928 48.0266 9.08 48.9706 9.224C50.0266 9.4 50.8906 9.592 51.5626 9.8C52.2346 9.992 52.8186 10.352 53.3146 10.88C53.8106 11.408 54.0586 12.144 54.0586 13.088C54.0586 13.888 53.8186 14.6 53.3386 15.224C52.8586 15.848 52.1546 16.336 51.2266 16.688C50.3146 17.024 49.2266 17.192 47.9626 17.192Z" fill="white" />
           </svg>
@@ -17,8 +19,13 @@
           </svg>
         </a>-->
         <div class="header-search box">
-          <input type="text" placeholder="Поиск">
-          <a class="a-with-svg" href="#">
+          <input type="text" placeholder="Поиск"
+            @input="inputSearch"     
+            @keypress.enter="findPetsBySearch()"    
+          >
+          <a class="a-with-svg" href="#"
+            @click="findPetsBySearch()" 
+          >
             <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M28.6457 26.9381L20.3989 18.6913C21.9963 16.7181 22.9581 14.2108 22.9581 11.48C22.9581 5.15083 17.8082 0.000946045 11.479 0.000946045C5.14983 0.000946045 0 5.15077 0 11.48C0 17.8092 5.14989 22.959 11.4791 22.959C14.2099 22.959 16.7171 21.9972 18.6903 20.3998L26.9371 28.6466C27.1727 28.8822 27.482 29.0007 27.7914 29.0007C28.1008 29.0007 28.4101 28.8822 28.6457 28.6466C29.1182 28.1742 29.1182 27.4105 28.6457 26.9381ZM11.4791 20.5424C6.48144 20.5424 2.41666 16.4776 2.41666 11.48C2.41666 6.48233 6.48144 2.41755 11.4791 2.41755C16.4767 2.41755 20.5415 6.48233 20.5415 11.48C20.5415 16.4776 16.4767 20.5424 11.4791 20.5424Z" fill="white" />
             </svg>
@@ -26,13 +33,6 @@
         </div>
       </div>
     </header>  
-    <!--<router-view
-      @cardPressed="cardPressed"
-      @catalogPressed="catalogPressed"
-      :petInfo='pet'
-      :kindOfPets='kindOfPets'
-      :breedOfPets='breedOfPets'
-      ></router-view>  -->
     <navigation-chain
       v-if="currentTab !== 'homeTab'"
       @homePressed="homePressed"
@@ -43,10 +43,8 @@
     <component       
       @catalogPressed="catalogPressed"
       @cardPressed="cardPressed"
-      :kindOfPets='kindOfPets'
-      :breedOfPets='breedOfPets'
-      :petInfo='pet'
-      :pets='pets'
+      :findedPets="findedPets"      
+      :pet='pet'
       :is="currentTab"> 
     </component>
     <footer class="layout__row layout__row_footer">
@@ -79,7 +77,9 @@ export default {
       breedOfPets: '',
       pet: {},
       pets: [],
-			error: ''
+      findedPets: [],
+			error: '',
+      search: ''
     }
   },
   methods: {
@@ -91,6 +91,7 @@ export default {
     catalogPressed(catalog) {  
       this.kindOfPets = catalog.kind, 
       this.breedOfPets = catalog.breed, 
+      this.findPets()
       this.currentTab = 'catalogTab'
     },
     cardPressed(card) {
@@ -98,6 +99,56 @@ export default {
       this.kindOfPets = card.kind, 
       this.breedOfPets = card.breed, 
       this.currentTab = "petTab"
+    },
+    findPets() {
+      this.findedPets = this.pets.filter(pet => {
+        if (this.breedOfPets === '' && pet.kind === this.kindOfPets) return true;
+        if (pet.breed === this.breedOfPets) return true;
+        return false;
+      })
+    },
+    inputSearch(event) {
+      this.search = event.target.value
+    },
+    findPetsBySearch(){      
+      this.search = this.search.toLowerCase()
+      this.findedPets = this.pets.filter(pet => {
+				if (pet.breed.toLowerCase() === this.search) return true;
+				return false;
+			})
+      if (this.findedPets.length > 0 ) {
+        this.kindOfPets = this.findedPets[0].kind
+        this.breedOfPets = this.findedPets[0].breed
+        this.currentTab = 'catalogTab'
+        return
+      }
+
+      this.findedPets = this.pets.filter(pet => {
+				if (pet.kind.toLowerCase() === this.search) return true;
+				return false;
+			})
+      if (this.findedPets.length > 0 ) {
+        this.kindOfPets = this.findedPets[0].kind     
+        this.breedOfPets = ''
+        this.currentTab = 'catalogTab'
+        return
+      }
+
+      this.findedPets = this.pets.filter(pet => {
+        if (pet.name.toLowerCase() === this.search) return true;
+        return false;
+			})
+      if (this.findedPets.length > 0 ) {    
+        this.kindOfPets = ''
+        this.breedOfPets = ''    
+        this.currentTab = 'catalogTab'
+        return
+      }
+
+      this.kindOfPets = ''
+      this.breedOfPets = ''
+      this.findedPets = []
+      this.currentTab = 'catalogTab'
     },
     print(event) {
       console.log(event)

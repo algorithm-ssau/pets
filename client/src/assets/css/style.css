@@ -77,45 +77,25 @@ a:visited {
 }
 
 .header-search {
-	position: relative;
-	height: 29px;
-	width: 329px;
 	margin-right: 0;
 	margin-left: auto;	
 }
 
 .header-search > input {
 	height: 29px;
-	width: 0;
-	padding: 0 29px 0 0;
+	width: 300px;
+	padding: 0;
+	margin-right: 9px;
 	border: none;
 	outline: none;
 	background: transparent;
-	transition: .4s ease;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 1;
-	cursor: pointer;
-	color: white;	
-}
+	color: white;
 
-.header-search > input:focus {
-	width: 291px;
-	padding: 0;
-	margin-right: 38px;
 	border-bottom: 2px solid white;
-	cursor: text;
 }
 
 .header-search > input::placeholder {
 	color: #E0E0E0; /* Gray 5 */
-}
-
-.header-search > a {
-	position: absolute;
-	top: 0;
-	right: 0;
 }
 
 .footer-span {
@@ -237,117 +217,3 @@ a:visited {
 	margin: 8px 0;
 	color: #828282; /* Gray 3 */
 }
-
-
-/*----------------------------------------------------------------------*/
-
-/*
-.header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-*/
-/*
-.header a {
-	color: #f2f2f2;
-	font-size: 17px;
-	font-family: sans-serif;
-	text-transform: uppercase;
-	text-decoration: none;
-	white-space: nowrap;
-	padding: 14px 16px;
-}
-
-.header a:hover {
-	background-color: #DDDDDD;
-	color: black;
-}*/
-/*
-.main {
-	display: flex;
-	flex-direction: column;
-  	margin: 13px auto;
-	width: 1000px;
-	min-width: 1000px;
-	background-color: #fff;
-	border: 13px solid #fff;
-	border-radius: 5px;
-}
-
-.main-first {
-	margin-top: 61px;
-}
-
-.main-img {
-	width: 32%;
-	border: 1px solid #333;
-	border-radius: 2px;	
-	margin: 0 8px;
-}
-
-.main-img-left {
-	margin: 0 13px 0 0;
-	float: left;
-}
-
-.main-img-right {
-	margin: 0 0 0 13px;
-	float: right;
-}
-
-.main-imgs {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.main-text-first {
-	margin-top: 0;
-}
-
-.main-text-last {
-	margin-bottom: 0;
-}
-
-.main-text-center {
-	text-align: center;
-}
-
-.main-table {
-	display: inline-block;
-	border-collapse: collapse;	
-	text-align: center;
-	width: 48%;
-}
-
-.main-table caption {
-	padding: 0 14px 12px 14px;
-	font-size: 1.3em;
-}
-
-.main-table th, td {
-	border: 2px solid #333;
-	padding: 7px 14px;
-}
-
-.main-table-assessment {
-	width: 10%;
-}
-
-.main-tables {
-	display: flex;
-	justify-content: space-around;
-	align-items: flex-start;
-}
-
-hr {
-	margin: 13px 0;
-	border: 1px solid #eee;
-}
-
-.anchor {
-	position: absolute;
-	margin-top: -61px;
-}
-	*/
