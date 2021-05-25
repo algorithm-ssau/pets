@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = 'http://localhost:5000/API/pets'
+const url = 'API/pets'
 
 class PetsImport {
   // get pets method
