@@ -10,7 +10,7 @@
 [Арсений Карпушин](https://github.com/Daetojoska)
 
 [Ильдар Ахмадиев](https://github.com/Sadomist)
-### Необходимо установить [Node.js](https://nodejs.org/en/download/)
+### Для запуска сайта необходимо установить [Node.js](https://nodejs.org/en/download/)
 ### Затем нужно устанавить Vue.js
 ```bash
   npm i -g @vue/cli
