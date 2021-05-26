@@ -1,10 +1,40 @@
-## This is a website about pets and their owners.
+# Pets
+## О проекте
+Это сайт каталог домашних животных под названием Pets.
+Над проектом работали:
 
-to run this on your system you will need 
+[Дмитрий Яцкевич](https://github.com/skipah7)
 
-```npm i -g @vue/cli```
-```npm ci```
-```npm start```
-```cd client```
-```npm ci```
-```npm run serve```
+[Евгений Шамин](https://github.com/vant110)
+
+[Арсений Карпушин](https://github.com/Daetojoska)
+
+[Ильдар Ахмадиев](https://github.com/Sadomist)
+
+***
+### Необходимо установить [Node.js](https://nodejs.org/en/download/).
+### Затем устанавливаем Vue.js
+```bash
+  npm i -g @vue/cli
+```
+
+## Запуск проекта
+### 1.Серверная часть
+Из корневой папки проекта:
+```bash
+  npm ci
+```
+#### Запуск сервера:
+```bash
+  npm start
+```
+### 2.Клиентская часть
+ Из корневой папки проекта:
+ ```bash
+  cd client 
+  npm ci
+ ```
+#### Запуск клиентской части: 
+ ```bash
+  npm run serve
+ ```
