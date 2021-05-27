@@ -31,7 +31,7 @@
   cd client 
   npm ci
  ```
-#### Запуск клиента: 
+#### Запуск девсервера: 
  ```bash
   npm run serve
  ```
